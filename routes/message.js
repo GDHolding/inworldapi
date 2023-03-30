@@ -22,9 +22,13 @@ async function send(req, res) {
     const client = await startSession(req);
     client.setMessageCallback((msg) => {
         msg.sessionId = client.session;
-        if(msg.text) {
+        if (msg.text) {
             res.write(JSON.stringify(msg) + "\r\n");
-            log(msg.text);
+            // log(msg.text);
+        }
+        log(msg.isAudio())
+        if (msg.isAudio() === true) {
+            res.write(JSON.stringify(msg) + "\r\n");
         }
 
         if(msg.isInteractionEnd()) {
