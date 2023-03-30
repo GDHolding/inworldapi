@@ -74,7 +74,7 @@ class InworldSession {
             // Setup required capabilities.
             // In this case you can receive character emotions.
             .setConfiguration({
-                capabilities: {audio: false, emotions: true},
+                capabilities: {audio: true, emotions: true},
             })
             // Use a full character name.
             // It should be like workspaces/{WORKSPACE_NAME}/characters/{CHARACTER_NAME}.
