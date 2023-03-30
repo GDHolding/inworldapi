@@ -77,6 +77,7 @@ class InworldSession {
                 capabilities: {audio: true, emotions: true},
             })
             // Use a full character name.
+            // Abak
             // It should be like workspaces/{WORKSPACE_NAME}/characters/{CHARACTER_NAME}.
             // Or like workspaces/{WORKSPACE_NAME}/scenes/{SCENE_NAME}.
             .setScene(this.scene)
